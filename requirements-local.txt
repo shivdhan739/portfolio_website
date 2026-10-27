@@ -1,0 +1,5 @@
+# For running on your own Windows/Mac PC (no PostgreSQL / gunicorn needed)
+Django>=5.2,<5.3
+whitenoise>=6.7
+dj-database-url>=2.2
+python-dotenv>=1.0

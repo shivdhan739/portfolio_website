@@ -1,0 +1,7 @@
+# Used by Render (live server). For your own PC use requirements-local.txt
+Django>=5.2,<5.3
+gunicorn>=22.0
+whitenoise>=6.7
+dj-database-url>=2.2
+psycopg2-binary>=2.9
+python-dotenv>=1.0

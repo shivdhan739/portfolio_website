@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Thanks for contacting Shivdhan Shirgole</title>
+</head>
+<body style="margin:0;padding:0;background:#eef1fb;">
+<!-- hidden preheader (inbox preview text) -->
+<div style="display:none;max-height:0;overflow:hidden;opacity:0;color:#eef1fb;">Thanks {{ msg.name }}! I got your message and I will reply personally very soon.</div>
+<table role="presentation" width="100%" cellpadding="0" cellspacing="0" style="background:#eef1fb;padding:28px 12px;">
+<tr><td align="center">
+  <table role="presentation" width="600" cellpadding="0" cellspacing="0" style="width:100%;max-width:600px;background:#ffffff;border-radius:20px;overflow:hidden;font-family:'Segoe UI',Arial,Helvetica,sans-serif;box-shadow:0 10px 30px rgba(40,50,120,.12);">
+
+    <!-- HERO -->
+    <tr><td align="center" bgcolor="#4f46e5" style="background-color:#4f46e5;background-image:linear-gradient(135deg,#4f46e5 0%,#7c3aed 55%,#c026d3 100%);padding:38px 24px 30px;">
+      <table role="presentation" cellpadding="0" cellspacing="0"><tr>
+        <td align="center" width="64" height="64" style="width:64px;height:64px;background:#ffffff;border-radius:32px;font-size:24px;font-weight:800;color:#4f46e5;letter-spacing:1px;">SS</td>
+      </tr></table>
+      <div style="font-size:13px;letter-spacing:3px;color:#e0defe;margin-top:16px;text-transform:uppercase;">Shivdhan Shirgole</div>
+      <div style="font-size:30px;line-height:1.25;font-weight:800;color:#ffffff;margin-top:10px;">Thank you for reaching out! &#128591;</div>
+      <div style="font-size:15px;color:#ede9fe;margin-top:10px;">Your message has landed safely in my inbox.</div>
+    </td></tr>
+
+    <!-- GREETING -->
+    <tr><td style="padding:30px 32px 6px;color:#1c2240;">
+      <p style="margin:0 0 12px;font-size:18px;font-weight:700;">Hi {{ msg.name }},</p>
+      <p style="margin:0;font-size:15px;line-height:1.7;color:#3b4266;">
+        Thanks a lot for contacting me through my portfolio. I really appreciate you taking the time to write.
+        I have received your message and I will personally read it and reply to you <b style="color:#4f46e5;">within 24 hours</b>.
+      </p>
+    </td></tr>
+
+    <!-- WHAT HAPPENS NEXT -->
+    <tr><td style="padding:22px 32px 4px;">
+      <div style="font-size:12px;letter-spacing:2px;text-transform:uppercase;color:#7c3aed;font-weight:700;margin-bottom:12px;">What happens next</div>
+      <table role="presentation" width="100%" cellpadding="0" cellspacing="0" style="font-size:14px;color:#3b4266;">
+        <tr>
+          <td width="38" valign="top" style="padding:0 0 12px;"><div style="width:28px;height:28px;line-height:28px;text-align:center;border-radius:14px;background:#e0e7ff;color:#4f46e5;font-weight:800;">1</div></td>
+          <td valign="top" style="padding:3px 0 12px;line-height:1.5;"><b>Message received</b> &ndash; saved safely, nothing is lost.</td>
+        </tr>
+        <tr>
+          <td width="38" valign="top" style="padding:0 0 12px;"><div style="width:28px;height:28px;line-height:28px;text-align:center;border-radius:14px;background:#ede9fe;color:#7c3aed;font-weight:800;">2</div></td>
+          <td valign="top" style="padding:3px 0 12px;line-height:1.5;"><b>I review it personally</b> &ndash; no bots, no auto-replies after this one.</td>
+        </tr>
+        <tr>
+          <td width="38" valign="top" style="padding:0 0 4px;"><div style="width:28px;height:28px;line-height:28px;text-align:center;border-radius:14px;background:#fae8ff;color:#c026d3;font-weight:800;">3</div></td>
+          <td valign="top" style="padding:3px 0 4px;line-height:1.5;"><b>You get my reply</b> &ndash; just check this same inbox.</td>
+        </tr>
+      </table>
+    </td></tr>
+
+    <!-- YOUR MESSAGE -->
+    <tr><td style="padding:18px 32px 6px;">
+      <div style="font-size:12px;letter-spacing:2px;text-transform:uppercase;color:#7c3aed;font-weight:700;margin-bottom:10px;">A copy of your message</div>
+      <table role="presentation" width="100%" cellpadding="0" cellspacing="0" style="background:#f5f6ff;border-left:4px solid #7c3aed;border-radius:10px;">
+        <tr><td style="padding:16px 18px;color:#1c2240;font-size:14px;line-height:1.65;">
+          <div style="font-weight:700;font-size:15px;margin-bottom:6px;">{{ msg.subject }}</div>
+          <div style="white-space:pre-wrap;color:#3b4266;">{{ msg.message }}</div>
+        </td></tr>
+      </table>
+    </td></tr>
+
+    <!-- BUTTONS -->
+    <tr><td align="center" style="padding:26px 32px 10px;">
+      <table role="presentation" cellpadding="0" cellspacing="0"><tr>
+        <td align="center" bgcolor="#4f46e5" style="border-radius:999px;background:#4f46e5;">
+          <a href="mailto:{{ admin_email }}" style="display:inline-block;padding:13px 26px;font-size:14px;font-weight:700;color:#ffffff;text-decoration:none;">&#9993;&nbsp; Email me directly</a>
+        </td>
+        <td width="12"></td>
+        <td align="center" style="border-radius:999px;border:2px solid #4f46e5;">
+          <a href="tel:{{ phone_link }}" style="display:inline-block;padding:11px 24px;font-size:14px;font-weight:700;color:#4f46e5;text-decoration:none;">&#128222;&nbsp; Call me</a>
+        </td>
+      </tr></table>
+      <div style="font-size:12px;color:#8a90b3;margin-top:12px;">Urgent? Call or WhatsApp {{ phone }}</div>
+    </td></tr>
+
+    <!-- SIGNATURE -->
+    <tr><td style="padding:22px 32px 30px;color:#1c2240;">
+      <div style="border-top:1px solid #e6e9f7;padding-top:18px;font-size:14px;line-height:1.6;">
+        Warm regards,<br>
+        <span style="font-size:18px;font-weight:800;color:#4f46e5;">Shivdhan Shirgole</span><br>
+        <span style="color:#6b7399;">Python Full Stack Developer</span>
+      </div>
+    </td></tr>
+
+    <!-- FOOTER -->
+    <tr><td align="center" bgcolor="#1c2240" style="background:#1c2240;padding:18px 24px;font-size:12px;line-height:1.6;color:#a9b0d6;">
+      You are receiving this because you filled the contact form on my portfolio.<br>
+      <a href="mailto:{{ admin_email }}" style="color:#c7caff;text-decoration:none;">{{ admin_email }}</a> &nbsp;|&nbsp; {{ phone }}
+    </td></tr>
+
+  </table>
+</td></tr>
+</table>
+</body>
+</html>
