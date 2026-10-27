@@ -30,9 +30,3 @@ services:
         sync: false
       - key: BREVO_API_KEY
         sync: false
-      - key: DJANGO_SUPERUSER_USERNAME
-        sync: false
-      - key: DJANGO_SUPERUSER_EMAIL
-        value: shivdhanshirgole2808@gmail.com
-      - key: DJANGO_SUPERUSER_PASSWORD
-        sync: false
