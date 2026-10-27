@@ -36,9 +36,9 @@ developer roles, SAP MM roles and project collaborations.
                 </h2>
 
                 <p class="content-paragraph">
-                    Fill in the form and I get your message by email. You also
-                    receive a confirmation copy in your own inbox. Open to
-                    Python, Full Stack and Backend developer roles.
+                    Fill in the form and I get your message by email.
+                    You also receive a confirmation copy in your own inbox.
+                    Open to Python, Full Stack and Backend developer roles.
                 </p>
 
                 <div class="contact-info-list">
@@ -47,7 +47,6 @@ developer roles, SAP MM roles and project collaborations.
                         <div class="contact-info-icon">
                             <i class="bi bi-envelope"></i>
                         </div>
-
                         <div>
                             <span>Email</span>
                             <a href="mailto:{{ public_email }}">
@@ -60,7 +59,6 @@ developer roles, SAP MM roles and project collaborations.
                         <div class="contact-info-icon">
                             <i class="bi bi-telephone"></i>
                         </div>
-
                         <div>
                             <span>Phone</span>
                             <a href="tel:{{ phone_link }}">
@@ -73,7 +71,6 @@ developer roles, SAP MM roles and project collaborations.
                         <div class="contact-info-icon">
                             <i class="bi bi-geo-alt"></i>
                         </div>
-
                         <div>
                             <span>Preferred Location</span>
                             <strong>Pune, Maharashtra, India</strong>
@@ -84,7 +81,6 @@ developer roles, SAP MM roles and project collaborations.
                         <div class="contact-info-icon">
                             <i class="bi bi-briefcase"></i>
                         </div>
-
                         <div>
                             <span>Career Interest</span>
                             <strong>Python / Full Stack Developer</strong>
@@ -130,8 +126,21 @@ developer roles, SAP MM roles and project collaborations.
                     >
                         {% csrf_token %}
 
-                        <!-- Honeypot: real visitors never see or fill this -->
-                        <input type="text" name="website" class="hp-field" tabindex="-1" autocomplete="off" aria-hidden="true">
+                        <!-- Honeypot: keep empty for real visitors -->
+                        <div class="hp-wrapper"
+                             aria-hidden="true"
+                             style="position:absolute;left:-10000px;width:1px;height:1px;overflow:hidden;">
+                            <label for="contact_reference_code">
+                                Leave this field empty
+                            </label>
+                            <input
+                                type="text"
+                                id="contact_reference_code"
+                                name="contact_reference_code"
+                                tabindex="-1"
+                                autocomplete="new-password"
+                            >
+                        </div>
 
                         <div class="row g-3">
 
@@ -139,7 +148,6 @@ developer roles, SAP MM roles and project collaborations.
                                 <label for="name" class="form-label">
                                     Full Name
                                 </label>
-
                                 <input
                                     type="text"
                                     class="form-control custom-form-control"
@@ -156,7 +164,6 @@ developer roles, SAP MM roles and project collaborations.
                                 <label for="email" class="form-label">
                                     Email Address
                                 </label>
-
                                 <input
                                     type="email"
                                     class="form-control custom-form-control"
@@ -173,7 +180,6 @@ developer roles, SAP MM roles and project collaborations.
                                 <label for="subject" class="form-label">
                                     Subject
                                 </label>
-
                                 <input
                                     type="text"
                                     class="form-control custom-form-control"
@@ -189,7 +195,6 @@ developer roles, SAP MM roles and project collaborations.
                                 <label for="message" class="form-label">
                                     Message
                                 </label>
-
                                 <textarea
                                     class="form-control custom-form-control"
                                     id="message"
@@ -221,7 +226,8 @@ developer roles, SAP MM roles and project collaborations.
 
                     <p class="form-privacy-note">
                         <i class="bi bi-shield-check"></i>
-                        Your information is used only to reply to your message. One message per email every 24 hours.
+                        Your information is used only to reply to your message.
+                        One message per email every 24 hours.
                     </p>
 
                 </div>
