@@ -9,8 +9,7 @@ services:
     name: shivdhan-portfolio
     runtime: python
     plan: free
-    # One-line build: no script file, so Windows line endings / file permissions cannot break it.
-    buildCommand: "pip install -r requirements.txt && python manage.py collectstatic --no-input && python manage.py migrate --no-input && (python manage.py createsuperuser --no-input || true)"
+    buildCommand: "pip install -r requirements.txt && python manage.py collectstatic --no-input && python manage.py migrate --no-input"
     startCommand: "gunicorn resume_project.wsgi:application"
     envVars:
       - key: PYTHON_VERSION
@@ -27,9 +26,9 @@ services:
         value: shivdhanshirgole2808@gmail.com
       - key: EMAIL_HOST_USER
         value: shivdhanshirgole2808@gmail.com
-      - key: EMAIL_HOST_PASSWORD   # Gmail App Password (paid plan -> SMTP works)
+      - key: EMAIL_HOST_PASSWORD
         sync: false
-      - key: BREVO_API_KEY         # optional: use this on the free plan instead of SMTP
+      - key: BREVO_API_KEY
         sync: false
       - key: DJANGO_SUPERUSER_USERNAME
         sync: false
