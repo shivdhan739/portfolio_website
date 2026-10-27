@@ -177,8 +177,8 @@ SERVER_EMAIL = EMAIL_HOST_USER
 CONTACT_EMAIL = ADMIN_EMAIL  # contact form messages are delivered here
 
 if BREVO_API_KEY:
-    # HTTPS API (port 443) - works even where SMTP ports are blocked (Render free plan)
-    EMAIL_BACKEND = "core.email_backends.BrevoAPIBackend"
+    # HTTPS API (port 443) - portfolio ऍपच्या आत email_backends फाईल आहे
+    EMAIL_BACKEND = "portfolio.email_backends.BrevoAPIBackend"
 elif EMAIL_HOST_PASSWORD:
     EMAIL_BACKEND = "django.core.mail.backends.smtp.EmailBackend"
 else:
