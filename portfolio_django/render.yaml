@@ -1,0 +1,39 @@
+databases:
+  - name: portfolio-db
+    plan: free
+    databaseName: portfolio
+    user: portfolio
+
+services:
+  - type: web
+    name: shivdhan-portfolio
+    runtime: python
+    plan: free
+    # One-line build: no script file, so Windows line endings / file permissions cannot break it.
+    buildCommand: "pip install -r requirements.txt && python manage.py collectstatic --no-input && python manage.py migrate --no-input && (python manage.py createsuperuser --no-input || true)"
+    startCommand: "gunicorn resume_project.wsgi:application"
+    envVars:
+      - key: PYTHON_VERSION
+        value: 3.12.3
+      - key: SECRET_KEY
+        generateValue: true
+      - key: DEBUG
+        value: "False"
+      - key: DATABASE_URL
+        fromDatabase:
+          name: portfolio-db
+          property: connectionString
+      - key: ADMIN_EMAIL
+        value: shivdhanshirgole2808@gmail.com
+      - key: EMAIL_HOST_USER
+        value: shivdhanshirgole2808@gmail.com
+      - key: EMAIL_HOST_PASSWORD   # Gmail App Password (paid plan -> SMTP works)
+        sync: false
+      - key: BREVO_API_KEY         # optional: use this on the free plan instead of SMTP
+        sync: false
+      - key: DJANGO_SUPERUSER_USERNAME
+        sync: false
+      - key: DJANGO_SUPERUSER_EMAIL
+        value: shivdhanshirgole2808@gmail.com
+      - key: DJANGO_SUPERUSER_PASSWORD
+        sync: false
